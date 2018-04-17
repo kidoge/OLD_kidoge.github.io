@@ -1,0 +1,68 @@
+.metro-nav {
+  background-color: #263238;
+  color: white;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.metro-line {
+  top: 50%;
+  left: 12%;
+  width: 76%;
+  height: 20px;
+  background-color: orange;
+  vertical-align: center;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+}
+
+
+.metro-station {
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: orange solid 4px;
+  background-color: white;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  z-index: 100;
+}
+
+.metro-station:nth-of-type(1) {
+  left: 15%;
+}
+
+.metro-station:nth-of-type(2) {
+  left: 50%;
+}
+
+.metro-station:nth-of-type(3) {
+  left: 85%;
+}
+
+.metro-marker {
+  left: 50%;
+  top: 50%;
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  background-color: white;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+}
+
+.metro-marker.selected {
+  background-color: #263238;
+}
+
+.metro-marker:not(.selected) {
+  background-color: #ffffff;
+}
