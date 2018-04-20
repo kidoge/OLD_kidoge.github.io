@@ -1,0 +1,23 @@
+{
+  "name": "kidoge.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kidoge/kidoge.github.io.git"
+  },
+  "author": "Kidon Son",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kidoge/kidoge.github.io/issues"
+  },
+  "homepage": "https://github.com/kidoge/kidoge.github.io#readme",
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
