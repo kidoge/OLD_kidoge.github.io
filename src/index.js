@@ -1,5 +1,7 @@
 "use strict";
 
+import './style.css'
+
 var canvas = null;
 var ctx = null;
 
