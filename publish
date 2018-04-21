@@ -1,0 +1,15 @@
+#!/bin/bash
+
+trap "echo 'Somethign went wrong. Aborting...'; exit" ERR
+
+if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
+  echo "Repository is not clean"
+  exit 1;
+fi
+
+git checkout develop
+npm run build
+git add -A
+git commit -m "updating master branch with built files"
+git checkout master
+git merge develop
