@@ -7,9 +7,14 @@ if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
   exit 1;
 fi
 
-git checkout develop
+if [[ $(git rev-parse --abbrev-ref HEAD) != "develop" ]]; then
+  echo "You're not on develop"
+  exit 1;
+fi
+
 npm run build
 git add -A
 git commit -m "updating master branch with built files"
 git checkout master
 git merge develop
+git checkout develop
