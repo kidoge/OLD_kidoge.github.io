@@ -7,6 +7,10 @@ module.exports = {
     filename: 'bundle.js',
     path: __dirname
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: '.'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Kidon Son',
