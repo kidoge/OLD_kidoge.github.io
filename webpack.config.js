@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,6 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     path: __dirname
   },
+  mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: '.'
@@ -15,6 +17,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Kidon Son',
       template: './src/index.html'
+    }),
+    new webpack.ProvidePlugin({
+        'window.jQuery'    : 'jquery',
+        'window.$'         : 'jquery',
+        'jQuery'           : 'jquery',
+        '$'                : 'jquery'
     })
   ],
   module: {

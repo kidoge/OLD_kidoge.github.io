@@ -1,6 +1,11 @@
 "use strict";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
+
 import './style.css'
+
+import $ from 'jquery'
 
 var canvas = null;
 var ctx = null;
@@ -11,20 +16,24 @@ var x = null;
 var y = null;
 var type = null; // 0 = black, 1 = white
 
-var VX = 0.4;
-var VY = 0.8;
+var VX = 0.2;
+var VY = 0.4;
 
 function resetLine() {
-  x = Math.random() * (canvas.width + canvas.height / 2) - canvas.height / 2;
-  y = 0;
   type = Math.floor(Math.random() * 2);
+  if  (type === 0) {
+    x = Math.random() * (canvas.width + canvas.height / 2) - canvas.height / 2;
+  } else {
+    x = Math.random() * (canvas.width + canvas.height / 2);
+  }
+  y = 0;
 }
+
 function init() {
   ctx.fillStyle = "red";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.lineWidth = 2;
   resetLine();
-
 
   timeElapsed();
   requestAnimationFrame(refresh);
@@ -73,3 +82,4 @@ function setup() {
 }
 
 $(setup);
+
