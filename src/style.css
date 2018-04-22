@@ -1,104 +1,25 @@
-canvas {
+.layout__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 400px;
-  opacity: 0.3;
+  height: 300px;
+  z-index: -100;
 }
 
-.metro-nav {
-  background-color: #263238;
-  color: white;
-  left: 50%;
-  width: 300px;
-  height: 50px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  transform: translateX(-50%);
+.layout__canvas-gradient {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 
-.metro-line {
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  height: 19px;
-  background-color: orange;
-  vertical-align: center;
-  transform: translateY(-50%);
-  position: absolute;
-  z-index: 10;
-}
-
-
-.metro-station {
-  top: 50%;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  border: orange solid 4px;
-  background-color: white;
-  transform: translateY(-50%) translateX(-50%);
-  position: absolute;
-  z-index: 100;
-}
-
-.metro-station:nth-of-type(1) {
-  left: 10%;
-}
-
-.metro-station:nth-of-type(2) {
-  left: 36.6%;
-}
-
-.metro-station:nth-of-type(3) {
-  left: 63.3%;
-}
-
-.metro-station:nth-of-type(4) {
-  left: 90%;
-}
-
-.metro-marker {
-  left: 50%;
-  top: 50%;
-  border-radius: 50%;
-  background-color: white;
-  transform: translateY(-50%) translateX(-50%);
-  position: absolute;
-  animation-duration: 0.2s;
-}
-
-.metro-marker.selected {
-  width: 15px;
-  height: 15px;
-  background-color: #263238;
-}
-
-.metro-marker:not(.selected) {
-  width: 11px;
-  height: 11px;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-  animation-direction: reverse;
-  animation-play-state: running;
-}
-
-.metro-station:hover .metro-marker:not(.selected) {
-  background-color: #455A64;
-  animation-name: marker-flip;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-  animation-play-state: running;
-}
-
-@keyframes marker-flip {
-  from {
-    width: 0px;
-    background-color: #ffffff;
-  }
-
-  to {
-    width: 11px;
-    background-color: #455A64;
-  }
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button,
+.layout-transparent .mdl-navigation__link {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: #212121;
 }
