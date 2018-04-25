@@ -1,0 +1,28 @@
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.centered {
+  text-align: center;
+}
+
+.header {
+  border-bottom: black 1px solid;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  text-align: center;
+  padding: 32px 0 32px 0;
+}
+
+.header__menu-option {
+  font-weight: normal;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.header__menu-option--selected {
+  font-weight: bold;
+  border-bottom: black 5px solid;
+}

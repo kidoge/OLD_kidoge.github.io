@@ -73,7 +73,7 @@
 
 /***/ "./node_modules/css-loader/index.js!./src/style.css":
 /*!*************************************************!*\
-  !*** ./node_modules/css-loader!./src/style.css ***!
+  !*** ./node_modules/css-loader!./src/common.css ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -11053,7 +11053,7 @@ module.exports = function (css) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common.css */ "./src/common.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
@@ -11145,13 +11145,13 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(setup);
 
 /***/ "./src/style.css":
 /*!***********************!*\
-  !*** ./src/style.css ***!
+  !*** ./src/common.css ***!
   \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../node_modules/css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/style.css");
+var content = __webpack_require__(/*! !../node_modules/css-loader!./common.css */ "./node_modules/css-loader/index.js!./src/common.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
