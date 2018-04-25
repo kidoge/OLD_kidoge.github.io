@@ -3,9 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    home: './src/home.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname
   },
   mode: 'development',
@@ -16,7 +19,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Kidon Son',
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/home.html',
+      filename: 'home.html'
     }),
     new webpack.ProvidePlugin({
         'window.jQuery'    : 'jquery',

@@ -4,34 +4,31 @@ import './common.css'
 import './index.css'
 import 'jquery'
 
-var contentNames = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+function getContentTarget() {
+  if (window.location.hash === "") {
+    return "home.html";
+  } else {
+    return "home.html";
+  }
+}
 
-
-function insertContent(container, contentName) {
-  var cardDiv = $('<div></div>', {
-    id: contentName,
-    'class': 'card'
+function updateContent() {
+  $.ajax(getContentTarget()).done(function(data) {
+    $('#content').html("[" + data + "]");
   });
-  $('<div></div>', {
-    'class': 'card__description',
-    text: contentName
-  }).appendTo(cardDiv);
-  cardDiv.appendTo(container);
-  console.log(contentName + " added");
 }
 
 function setup() {
-  var target = $("#content");
-  if (target.length == 0) {
-    console.error("Missing HTML element");
-    return;
+  console.log("wawa");
+  var menuOptions = $('.header__menu-option');
+  for (var optionIdx = 0; optionIdx < menuOptions.length; ++optionIdx) {
+    var option = $(menuOptions[optionIdx]);
+    option.click(function() {
+      window.location.hash = option.href;
+      updateContent();
+    });
   }
-  target = target[0];
-
-  var colIdx = 0;
-  for (var contentIdx = 0; contentIdx < contentNames.length; ++contentIdx) {
-    insertContent(target, contentNames[contentIdx]);
-  }
+  updateContent();
 }
 
 $(setup);
