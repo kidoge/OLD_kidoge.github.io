@@ -3,44 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
-  <div class="layout-transparent mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-      <canvas class="layout__canvas"></canvas>
-      <div class="layout__canvas-gradient"></div>
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Kidon Son</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Home</a>
-          <a class="mdl-navigation__link" href="">Resume</a>
-          <a class="mdl-navigation__link" href="">Gallery</a>
-          <a class="mdl-navigation__link" href="">Contact</a>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Kidon Son</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      Content starts here
-    </main>
+<div class="header">
+  <h1 class="header__title">Kidon Son</h1>
+
+  <div id="menu" class="centered">
+    <a class="header__menu-option header__menu-option--selected" href="#home">Home</a>
+    <a class="header__menu-option" href="#about_me">About Me</a>
+    <a class="header__menu-option" href="#resume">Resume</a>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
-<script type="text/javascript" src="bundle.js"></script></body>
+</div>
+
+<div id="content">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="index.bundle.js"></script></body>
 </html>

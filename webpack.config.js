@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: __dirname
   },
-  mode: 'production',
+  mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: '.'
@@ -27,6 +27,11 @@ module.exports = {
       template: './src/home.html',
       filename: 'home.html',
       chunks: ['home']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about_me.html',
+      filename: 'about_me.html',
+      chunks: ['about_me']
     }),
     new webpack.ProvidePlugin({
         'window.jQuery'    : 'jquery',
