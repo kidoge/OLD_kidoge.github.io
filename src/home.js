@@ -12,10 +12,10 @@ function insertContent(container, contentName) {
     text: contentName
   }).appendTo(cardDiv);
   cardDiv.appendTo(container);
-  console.log(contentName + " added");
 }
 
 function homeSetup() {
+  console.log('homeSetup');
   var target = $("#gallery");
   if (target.length == 0) {
     console.error("Missing HTML element");

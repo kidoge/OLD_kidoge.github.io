@@ -13,13 +13,15 @@ function getContentTarget() {
 }
 
 function updateContent() {
-  $.ajax(getContentTarget()).done(function(data) {
-    $('#content').html("[" + data + "]");
+  console.log('updateContent');
+  $.get(getContentTarget(), null, function(data) {
+    $('#content').html(data);
+    console.log(data);
   });
 }
 
 function setup() {
-  console.log("wawa");
+  console.log('setup');
   var menuOptions = $('.header__menu-option');
   for (var optionIdx = 0; optionIdx < menuOptions.length; ++optionIdx) {
     var option = $(menuOptions[optionIdx]);
@@ -31,4 +33,4 @@ function setup() {
   updateContent();
 }
 
-$(setup);
+$(window).on('load', setup);

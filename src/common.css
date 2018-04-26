@@ -17,6 +17,8 @@ body {
 }
 
 .header__menu-option {
+  color: black;
+  text-decoration: none;
   font-weight: normal;
   padding-left: 16px;
   padding-right: 16px;

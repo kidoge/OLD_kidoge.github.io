@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: __dirname
   },
-  mode: 'development',
+  mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: '.'
@@ -20,11 +20,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Kidon Son',
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       template: './src/home.html',
-      filename: 'home.html'
+      filename: 'home.html',
+      chunks: ['home']
     }),
     new webpack.ProvidePlugin({
         'window.jQuery'    : 'jquery',
