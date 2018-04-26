@@ -33,6 +33,11 @@ module.exports = {
       filename: 'about_me.html',
       chunks: ['about_me']
     }),
+    new HtmlWebpackPlugin({
+      template: './src/resume.html',
+      filename: 'resume.html',
+      chunks: ['resume']
+    }),
     new webpack.ProvidePlugin({
         'window.jQuery'    : 'jquery',
         'window.$'         : 'jquery',
