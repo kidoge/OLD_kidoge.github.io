@@ -1,15 +1,30 @@
-.card {
-  position: relative;
-  display: block;
-  width: 90%;
-  height: 256px;
-  border: 1px solid black;
-  margin: 8px auto 8px auto;
+body {
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
-.card__description {
-  position: absolute;
-  bottom: 0px;
-  margin: 16px;
-  font-size: 3em;
+.centered {
+  text-align: center;
+}
+
+.header {
+  border-bottom: black 1px solid;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  text-align: center;
+  padding: 32px 0 32px 0;
+}
+
+.header__menu-option {
+  color: black;
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.header__menu-option--selected {
+  font-weight: bold;
+  border-bottom: black 5px solid;
 }

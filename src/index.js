@@ -1,7 +1,7 @@
 "use strict";
 
-import './common.css'
 import './index.css'
+import './home.css'
 import 'jquery'
 
 function getContentTarget() {

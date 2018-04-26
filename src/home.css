@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 256px;
+  border: 1px solid black;
+  margin: 8px auto 8px auto;
+}
+
+.card__description {
+  position: absolute;
+  bottom: 0px;
+  margin: 16px;
+  font-size: 3em;
+}
